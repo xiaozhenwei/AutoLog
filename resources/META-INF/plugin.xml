@@ -1,0 +1,51 @@
+<idea-plugin>
+  <id>com.github.xiaozhenwei</id>
+  <name>AutoLog</name>
+  <version>1.0</version>
+  <vendor email="373786497@qq.com" url="https://github.com/xiaozhenwei">xiaozhenwei</vendor>
+
+  <description><![CDATA[
+      快速打log的插件<br>
+      模块快捷键为：ctrl + shift + L <br>
+      例如新开一行，输入xzw，按下快捷键，将自动输入：<br>
+      Log.d("xzw","AccessSort:appendToEnd("+sortedMethods+"):140");<br>
+      以上包括tag，类名，函数名，参数，所在行数。<br>
+      同时支持快速统计时间、打印调用栈<br>
+      统计时间举例：<br>
+      xzw_time + 快捷键<br>
+      打印调用栈举例：<br>
+      xzw_trace + 快捷键<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      <br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <group id="log" text="auto log" popup="true" description="auto log group">
+
+      <action id="autoLog" class="Action.AutoLog" text="AutoLog" description="auto create your log">
+        <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift L"/>
+      </action>
+      <add-to-group group-id="CodeMenu" anchor="first"/>
+    </group>
+
+  </actions>
+
+</idea-plugin>
