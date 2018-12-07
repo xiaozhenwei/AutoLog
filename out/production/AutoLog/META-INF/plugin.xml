@@ -6,7 +6,7 @@
 
   <description><![CDATA[
       快速打log的插件<br>
-      模块快捷键为：ctrl + shift + L <br>
+      默认快捷键为：ctrl + shift + L <br>
       例如新开一行，输入xzw，按下快捷键，将自动输入：<br>
       Log.d("xzw","AccessSort:appendToEnd("+sortedMethods+"):140");<br>
       以上包括tag，类名，函数名，参数，所在行数。<br>

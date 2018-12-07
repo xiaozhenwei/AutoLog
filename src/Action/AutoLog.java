@@ -46,7 +46,7 @@ public class AutoLog extends EditorAction {
                 PsiElement elementAt = psiFile.findElementAt(offSet);
                 PsiClass psiClass = PsiTreeUtil.getParentOfType(elementAt,PsiClass.class);
                 if(null!=psiClass){
-                    contentBuffer.append(psiClass.getName());
+                    contentBuffer.append(psiClass.getName()!=null?psiClass.getName():"unNamed class");
                     contentBuffer.append(":");
                 }
                 PsiMethod method = PsiTreeUtil.getParentOfType(elementAt, PsiMethod.class);
